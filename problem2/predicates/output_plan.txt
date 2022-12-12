@@ -1,0 +1,13 @@
+(load agent f0 carr0 depot q0 q1)
+(load agent f2 carr0 depot q1 q2)
+(load agent m1 carr0 depot q2 q3)
+(load agent m2 carr0 depot q3 q4)
+(move_to_deliver agent carr0 depot l1)
+(unload agent f0 carr0 alice l1 q4 q3)
+(move_to_deliver agent carr0 l1 l2)
+(unload agent m1 carr0 bob l2 q3 q2)
+(move_to_deliver agent carr0 l2 l3)
+(unload agent f2 carr0 mary l3 q2 q1)
+(unload agent m2 carr0 mary l3 q1 q0)
+; cost = 11 (unit cost)
+

@@ -1,0 +1,20 @@
+Solution with original makespan 50.13 found (ignoring no-moving-targets-rule).
+Plan length: 14 step(s).
+Makespan   : 50.131
+Rescheduled Makespan   : 50.131
+Search time: 0 seconds - Walltime: 0.00414991 seconds
+Total time: 0 seconds - Walltime: 0.00893092 seconds
+0.00100000: (load agent f3 carr0 depot q0 q1) [2.00000000]
+2.01100000: (move_to_deliver agent carr0 depot l1) [5.00000000]
+7.02100000: (unload agent f3 food alice carr0 l1 q1 q0) [3.00000000]
+10.03100000: (move_to_depot agent carr0 l1 depot) [5.00000000]
+15.04100000: (load agent f1 carr0 depot q0 q1) [2.00000000]
+17.05100000: (load agent m3 carr0 depot q1 q2) [2.00000000]
+19.06100000: (move_to_deliver agent carr0 depot l2) [5.00000000]
+24.07100000: (unload agent m3 medicine bob carr0 l2 q2 q1) [3.00000000]
+27.08100000: (move_to_deliver agent carr0 l2 l3) [5.00000000]
+32.09100000: (unload agent f1 food mary carr0 l3 q1 q0) [3.00000000]
+35.10100000: (move_to_depot agent carr0 l3 depot) [5.00000000]
+40.11100000: (load agent m2 carr0 depot q0 q1) [2.00000000]
+42.12100000: (move_to_deliver agent carr0 depot l3) [5.00000000]
+47.13100000: (unload agent m2 medicine mary carr0 l3 q1 q0) [3.00000000]

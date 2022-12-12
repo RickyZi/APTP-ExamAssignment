@@ -1,0 +1,93 @@
+set instance agent robot
+
+set instance depot warehouse
+
+set instance q0 zero_quantity
+
+set instance l1 location
+set instance l2 location
+set instance l3 location
+set instance l4 location
+
+set instance f0 crate
+set instance f1 crate
+set instance f2 crate
+set instance f3 crate
+
+set instance m0 crate
+set instance m1 crate
+set instance m2 crate
+set instance m3 crate
+
+set instance q1 non_zero_quantity
+set instance q2 non_zero_quantity
+set instance q3 non_zero_quantity
+set instance q4 non_zero_quantity
+
+set instance carr0 carrier
+
+set instance food supply
+set instance medicine supply
+
+set instance alice person
+set instance bob person
+set instance mary person
+set instance dave person
+
+
+set predicate (person_at alice l1)
+set predicate (person_at bob l2)
+set predicate (person_at mary l3)
+set predicate (person_at dave l4)
+
+set predicate (crate_content f0 food)
+set predicate (crate_content f1 food)
+set predicate (crate_content f2 food)
+set predicate (crate_content f3 food)
+
+set predicate (crate_content m0 medicine)
+set predicate (crate_content m1 medicine)
+set predicate (crate_content m2 medicine)
+set predicate (crate_content m3 medicine)
+
+set predicate (crate_at f0 depot)
+set predicate (crate_at f1 depot)
+set predicate (crate_at f2 depot)
+set predicate (crate_at f3 depot)
+
+set predicate (crate_at m0 depot)
+set predicate (crate_at m1 depot)
+set predicate (crate_at m2 depot)
+set predicate (crate_at m3 depot)
+
+set predicate (robot_at agent depot)
+
+set predicate (carrier_at carr0 depot)
+
+set predicate (num_crates carr0 q0)
+
+set predicate (inc q0 q1)
+set predicate (inc q1 q2)
+set predicate (inc q2 q3)
+set predicate (inc q3 q4)
+
+set predicate (dec q4 q3)
+set predicate (dec q3 q2)
+set predicate (dec q2 q1)
+set predicate (dec q1 q0)
+
+set predicate (free agent)
+
+set predicate (needs alice food)
+set predicate (does_not_need alice medicine)
+
+set predicate (needs bob medicine)
+set predicate (does_not_need bob food)
+
+set predicate (needs mary food)
+set predicate (needs mary medicine)
+
+set predicate (does_not_need dave food)
+set predicate (does_not_need dave medicine)
+
+set goal (and (does_not_need alice food) (does_not_need alice medicine) (does_not_need bob food) (does_not_need bob medicine) (does_not_need mary food) (does_not_need mary medicine) (does_not_need dave food) (does_not_need dave medicine) (robot_at agent depot) (carrier_at carr0 depot))

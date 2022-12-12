@@ -1,0 +1,3 @@
+optic -N domain.pddl problem.pddl
+
+tfd domain.pddl problem.pddl
